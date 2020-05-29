@@ -1,0 +1,327 @@
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css);
+
+
+body {
+  font-family: 'Roboto', "Arial", "Helvetica", sans-serif;
+  margin: 0;
+  background-image : url('img/spring3.jpg');
+  
+}
+.splash-body {
+  background-image : url('img/summer.jpg');
+  
+}
+.menu-container {
+  display: none;
+}
+.menu-container div a {
+  padding-left : 1em;
+  padding-bottom: 0.5em;
+  padding-top : 0.5em;
+  text-align: left;
+}
+.flex-container section div {
+  font-size: 1em;
+  padding-left: 1em;
+  padding-bottom: 2em;
+}
+.menu-container div:nth-of-type(odd) {
+  background-color : white;
+}
+.menu-container div p {
+  font-size: 1.3em;
+  padding-left : 1em;
+  display: inline;
+  text-align: left;
+  color : palevioletred;
+
+}
+#hamburger-menu {
+  text-align: left;
+  display : inline;
+  padding-bottom : 2em;
+  color: saddlebrown;
+}
+
+nav {
+  top : 0;
+  left : 0;
+  width : 100%;
+  background-color: mistyrose;
+  padding: .75em;
+  
+}
+.menu h1 {
+  padding-left: .3em;
+  font-family: "Kaushan Script", fantasy, Papyrus;
+  color : saddlebrown;
+  font-size: 1.3em;
+  display : inline;
+}
+.calander-large {
+ display : none;
+}
+.flex-container {
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding : 1em;
+  
+  flex-direction: column;
+}
+.flex-container section{
+  margin : .5em;
+  display : flex;
+  
+  flex-direction: column;
+  flex : 0 0 4em;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow : 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
+}
+.flex-container section h1 {
+  font-size: 1.2em;
+  color : pink;
+  text-align: left;
+  
+ 
+
+}
+
+.flex-container section h2 {
+  font-size:1em;
+  color : saddlebrown;
+  
+
+
+}
+.flex-container section label {
+  display: inline;
+  padding-right: .2em;
+}
+.table-container {
+  padding-right : 2em;
+  padding-left : 2em;
+  padding-top : 0em;
+  
+}
+.flex-container section p {
+  color : saddlebrown;
+
+}
+table {
+  
+  background-color: white;
+  table-layout: fixed ;
+  width: 100% ;
+}
+table td {
+  height : 30em;
+  width: 25% ;
+}
+footer {
+position: relative;
+padding-top: 2em;
+bottom: 0;
+width: 100%;
+font-size: .5em;
+}
+#sub-menu-small {
+  float:right;
+}
+#sub-menu-small i {
+  padding-left: 1em;
+  color : saddlebrown;
+}
+
+.splash {
+  font-family: "Kaushan Script", fantasy, Papyrus;
+  text-align: center;
+  margin-top : 23vh;
+  color : steelblue;
+  font-size: 1em;
+}
+
+.button-container a {
+  visibility: hidden;
+}
+.button-container {
+  width:100%;
+  display: flex;
+  justify-content : space-between;
+  padding-top: 2em;
+}
+.searchBox {
+  padding-left : 1em;
+}
+.menu-container a {
+  text-decoration: none;
+  color : palevioletred;
+}
+
+.menu-container a:hover {
+  color : saddlebrown;
+  text-decoration: underline;
+}
+
+.lecture-manager {
+  display: flex;
+  flex-direction: column;
+}
+
+.lecture-manager button {
+  margin-left : 0em;
+  margin-right : 2em;
+
+}
+
+.lecture-font {
+  color : saddlebrown;
+  font-size: 2em;
+  padding : .6em;
+}
+.progress {
+  height : 4em;
+  margin-bottom : 5em;
+}
+.form {
+  margin-bottom: 2em;
+}
+
+
+
+li input {
+  margin-left: 1em;
+}
+.font-strike {
+   text-decoration: line-through; 
+}
+@media (min-width: 598px) {
+  .splash {
+      font-size: 1.2em;
+  }
+  .theme span {
+      font-size: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+      background-image : url('img/springMedium.jpg');
+
+  }
+  .menu-container div p {
+      font-size: 2em;
+  }
+  .menu-container div {
+      padding-left : 2em;
+      padding-bottom: 1em;
+      padding-top : 1em;
+      text-align: left;
+  }
+  table {
+      margin-top : 3em;
+  }
+  .splash {
+      font-size: 2em;
+  }
+  .theme span {
+      font-size: 1.2em;
+  }
+  footer {
+      position : fixed;
+  }
+  /* #delete-lecture {
+      float: right;
+  } */
+}
+
+@media (min-width: 1096px) {
+  
+  nav {
+      top : 0;
+      left : 0;
+      width : 100%;
+      padding: .75em;
+      background-color: mistyrose;
+      
+  }
+  .menu-container {
+      margin : 0;
+      padding : 0;
+      padding-top : .5em;
+      padding-right : 3em;
+      padding-left : 1em;
+      display: inline;
+      text-align: center;
+  }
+  .menu-container div p {
+      font-size: 1em;
+      padding-right : 1em;
+  }
+  .menu-container div p:hover {
+      color : saddlebrown;
+      text-decoration: underline;
+  }
+  .menu-container div {
+      padding : 0 0;
+      display : inline;
+      
+  }
+  
+  .menu-container div:nth-of-type(odd) {
+      background-color : mistyrose;
+  }
+  .calander-view-small {
+      display : none;
+  }
+  .calander-large {
+      display : inline;
+   }
+  .flex-container {
+      flex-wrap: nowrap;
+      flex-direction: row;
+      padding-right : 3em;
+      padding-left : 3em;
+  }
+  .flex-container section{
+      flex : 0 0 14%;
+      background-color: white;
+      margin : .5rem;
+      border-radius: 10px;
+      box-shadow : 01px 3px rgba(0,0,0,0.16), 01px 3px rgba(0,0,0,0.23);
+    }
+  
+  table {
+      margin-top : 1em;
+  }
+  
+  #hamburger-menu {
+      display : none;
+  }
+
+  .menu h1 {
+      font-size: 1em;
+  }
+  #sub-menu-small {
+      display : none;
+  }
+  .splash {
+      font-size: 3.2em;
+  }
+
+  .sub-menu {
+      float : right;
+  }
+  .theme span {
+      font-size: 1em;
+  }
+  .button-container a {
+      visibility: visible;
+      float : right;
+      margin-right :2em;
+      
+  }
+}

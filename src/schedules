@@ -1,0 +1,38 @@
+[
+    Monday = {
+        Lecture : [],
+        Assignment : [],
+        QuizExam : []
+    },
+    Tuesday = {
+        Lecture : [],
+        Assignment : [],
+        QuizExam : []
+    },
+    Wednesday = {
+        Lecture : [],
+        Assignment : [],
+        QuizExam : []
+    },
+    Thursday = {
+        Lecture : [],
+        Assignment : [],
+        QuizExam : []
+    },
+    Friday = {
+        Lecture : [],
+        Assignment : [],
+        QuizExam : []
+    },
+    Saturday = {
+        Lecture : [],
+        Assignment : [],
+        QuizExam : []
+    },
+    Sunday = {
+        Lecture : [],
+        Assignment : [],
+        QuizExam : []
+    }
+
+]

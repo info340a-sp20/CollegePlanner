@@ -1,0 +1,10 @@
+[
+    {"day" : "Monday", "Lectures" : [], "Assignments" : [], "Quizzes" : []},
+    {"day" : "Tuesday", "Lectures" : [], "Assignments" : [], "Quizzes" : []},
+    {"day" : "Wednesday", "Lectures" : [], "Assignments" : [], "Quizzes" : []},
+    {"day" : "Thursday", "Lectures" : [], "Assignments" : [], "Quizzes" : []},
+    {"day" : "Friday", "Lectures" : [], "Assignments" : [], "Quizzes" : []},
+    {"day" : "Saturday", "Lectures" : [], "Assignments" : [], "Quizzes" : []},
+    {"day" : "Sunday", "Lectures" : [], "Assignments" : [], "Quizzes" : []}
+
+]
