@@ -3,7 +3,8 @@ import { NavigationBar } from './NavigationBar.js';
 import { ChangeViewButton } from './ChangeViewButton.js';
 
 import {Footer} from './Footer.js';
-import {Schedule} from './Schedule.js';
+import {AllSchedule} from './AllSchedule.js';
+import { Schedule } from './Schedule.js'
 
 import{Calander} from './Calander.js';
 export class CalanderView extends Component {
@@ -20,11 +21,12 @@ export class CalanderView extends Component {
 }
 export class MemoView extends Component {
     render() {
+        console.log(this.props.state);
         return (
             <body>
                 <NavigationBar />
                 <ChangeViewButton view='Calander View' path='CalanderView' />
-                <Schedule />
+                <AllSchedule state={this.props.state} />
 
                 <Footer />
             </body>

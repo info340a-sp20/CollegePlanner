@@ -3,47 +3,41 @@ import { Card, CardGroup } from 'react-bootstrap';
 export class Schedule extends Component {
     render() {
         let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
         return (
             <main>
                 <div className="flex-container">
                     <EachDay days={days} task={this.props.task} state={this.props.state} />
                 </div>
-
             </main>
         );
     }
 }
 
 export class EachDay extends Component {
+    
+      
     render() {
-
-
         let isMainPage = this.props.task + ': ';
         if (this.props.task == undefined) {
             isMainPage = '';
         }
-        console.log(this.props.state);
-
         let rightKind = this.props.state.tasks.map((task) => {
-            if (task.taskKind == this.props.task) {
+            if (task != undefined && task.taskKind == this.props.task) {
                 return task;
             }
         });
 
-
         let result = this.props.days.map((day) => {
             let tasks2 = rightKind.map((task) => {
-                console.log(task);
-                if (task.day == day) {
+                
+                if (task != undefined && task.day == day) {
                     return task;
                 }
             });
-
             let textComponent = tasks2.map((task) => {
                 if (task != undefined) {
                     return <Card.Text as='div'>
-                        {task.description}
+                        {task.description + '  '}<input type='checkbox'></input>
                     </Card.Text>
                 }
 

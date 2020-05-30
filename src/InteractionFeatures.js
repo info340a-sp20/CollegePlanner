@@ -10,9 +10,17 @@ export class InteractionFeatures extends Component {
             taskKind: ''
          };
       } 
+      handleDelete = (event) => {
+        event.preventDefault();
+
+        this.props.deleteTaskCallback();
+
+      }
+
       handleChange = (event) => {
         let value = event.target.value;
         this.setState({ newDescription: value })
+        this.setState({ taskKind: this.props.task })
       }
       handleSelect = (event) => {
         let value = event.target.value;
@@ -20,7 +28,14 @@ export class InteractionFeatures extends Component {
       }
       handleClick = (event) => {
         event.preventDefault();
-        this.props.addTaskCallback(this.state.newDescription, this.state.day, 'Lectures');
+        
+        this.props.addTaskCallback(this.state.newDescription, this.state.day, this.state.taskKind);
+        this.state.newDescription = '';
+      }
+
+      handleSearch = (event) => {
+        let value = event.target.value;
+          this.props.searchCallback(value);
       }
     render() {
         return (
@@ -30,8 +45,8 @@ export class InteractionFeatures extends Component {
                     handleChange={this.handleChange} state={this.state}
                     handleSelect={this.handleSelect} handleClick={this.handleClick}/>
                     
-                    <DeleteButton task={this.props.task}/>
-                    <SearchBar />
+                    <DeleteButton task={this.props.task} handleDelete={this.handleDelete}/>
+                    <SearchBar handleSearch={this.handleSearch}/>
                 </div>
             </section>
         );
@@ -46,7 +61,7 @@ export class AddTasks extends Component {
             <div className="input-group mb-3">
                 <SelectDays handleSelect={this.props.handleSelect}/>
                 <input type="text" className="form-control" aria-label="Text input with dropdown button"
-                    placeholder={placeholder}
+                    value={this.props.state.newDescription} placeholder={placeholder}
                     onChange={this.props.handleChange}>
 
                 </input>
@@ -75,10 +90,11 @@ export class SelectDays extends Component {
 }
 
 export class SearchBar extends Component {
+    
     render() {
         return (
             <span>
-                <input id="searchbar" type="text"  name="search" placeholder="Search..."></input>
+                <input id="searchbar" type="text"  name="search" placeholder="Search..." onChange={this.props.handleSearch}></input>
             </span>
         );
     }
