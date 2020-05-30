@@ -30,4 +30,4 @@ export class MemoView extends Component {
             </body>
         );
     }
-}
+} 

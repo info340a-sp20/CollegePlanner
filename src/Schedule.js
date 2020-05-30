@@ -17,26 +17,44 @@ export class Schedule extends Component {
 
 export class EachDay extends Component {
     render() {
-        
+
 
         let isMainPage = this.props.task + ': ';
         if (this.props.task == undefined) {
             isMainPage = '';
         }
+        console.log(this.props.state);
 
-        
+        let rightKind = this.props.state.tasks.map((task) => {
+            if (task.taskKind == this.props.task) {
+                return task;
+            }
+        });
+
 
         let result = this.props.days.map((day) => {
-            
+            let tasks2 = rightKind.map((task) => {
+                console.log(task);
+                if (task.day == day) {
+                    return task;
+                }
+            });
+
+            let textComponent = tasks2.map((task) => {
+                if (task != undefined) {
+                    return <Card.Text as='div'>
+                        {task.description}
+                    </Card.Text>
+                }
+
+            });
             let component = (
                 <CardGroup as='section'>
                     <Card.Body>
-                    <Card.Title as='h1'>{day}</Card.Title>
-                    <Card.Title as='h2'>{isMainPage}</Card.Title>
-                    <Card.Text as='div'>
-                        
-                    </Card.Text>
-                </Card.Body>
+                        <Card.Title as='h1'>{day}</Card.Title>
+                        <Card.Title as='h2'>{isMainPage}</Card.Title>
+                        {textComponent}
+                    </Card.Body>
                 </CardGroup>
 
             );

@@ -1,4 +1,8 @@
 import React, { Component } from 'react'; //import React Component
+import {AssignmentManager, LectureManager, QuizManager} from './Managers.js';
+import {BrowserRouter, Route, Switch} from'react-router-dom';
+import {CalanderView, MemoView} from'./MainPages.js';
+
 
 export class NavigationBar extends Component {
     render() {
@@ -19,6 +23,23 @@ export class NavigationBar extends Component {
     }
 }
 
+
+
+// <BrowserRouter>
+//   <Switch>
+//     <Route path='/lectureManager' component={LectureManager} state={this.state} render={(props) => <LectureManager addTaskCallback = {this.addTask} />} />
+//     <Route path='/assignmentManager' component={AssignmentManager} />
+//     <Route path='/quizManager' component={QuizManager} />
+//     <Route path='/memoView' component={MemoView} />
+//     <Route path='/calanderView' component={CalanderView} />
+//     {/* <Route path='/splash' component={Splash} /> */}
+//   </Switch>
+// </BrowserRouter>
+
+
+
+
+
 export class MobileMenu extends Component {
     render() {
         return (
@@ -32,6 +53,7 @@ export class MobileMenu extends Component {
 export class NavMenus extends Component {
     render() {
         return (
+            
             <div className="menu-container">
                 <div id="home" aria-label="home">
                     <a href='/calanderView'>Home</a>
@@ -56,6 +78,7 @@ export class NavMenus extends Component {
                 <div className="sub-menu" aria-label="profile">
                     <p>profile</p>
                 </div>
+                
             </div>
         );
     }

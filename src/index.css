@@ -199,12 +199,11 @@ li input {
    text-decoration: line-through; 
 }
 @media (min-width: 598px) {
-  .splash {
-      font-size: 1.2em;
-  }
+  
   .theme span {
       font-size: 1em;
   }
+ 
 }
 
 @media (min-width: 768px) {
@@ -224,9 +223,7 @@ li input {
   table {
       margin-top : 3em;
   }
-  .splash {
-      font-size: 2em;
-  }
+  
   .theme span {
       font-size: 1.2em;
   }
@@ -236,6 +233,12 @@ li input {
   /* #delete-lecture {
       float: right;
   } */
+  .splash h1 {
+    font-size: 3.5em;
+}
+.splash h2 {
+  font-size: 1.8em;
+}
 }
 
 @media (min-width: 1096px) {
@@ -308,10 +311,12 @@ li input {
   #sub-menu-small {
       display : none;
   }
-  .splash {
-      font-size: 3.2em;
+  .splash h1 {
+      font-size: 5.5em;
   }
-
+  .splash h2 {
+    font-size: 2.5em;
+}
   .sub-menu {
       float : right;
   }

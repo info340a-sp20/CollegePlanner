@@ -6,9 +6,9 @@ export class InteractionFeatures extends Component {
         super(props);
         this.state = { 
             newDescription: '',
-            day: '',
+            day: 'Monday',
             taskKind: ''
-         }; //what is typed in
+         };
       } 
       handleChange = (event) => {
         let value = event.target.value;
@@ -61,7 +61,7 @@ export class SelectDays extends Component {
     render() {
 
         return (
-            <select className="selectpicker" placeholder="Select the day" onChange={this.props.handleSelect}>
+            <select className="selectpicker" placeholder="Select the day"  onChange={this.props.handleSelect}>
                 <option>Monday</option>
                 <option>Tuesday</option>
                 <option>Wednesday</option>
