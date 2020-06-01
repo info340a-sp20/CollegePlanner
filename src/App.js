@@ -65,7 +65,7 @@ handleChange(e) {
   deleteTask = () => {
     this.setState((currentState) => {
       let updatedState = [];
-      return { tasks: updatedState }
+      return { tasks: updatedState, filtered:updatedState }
     })
   }
 

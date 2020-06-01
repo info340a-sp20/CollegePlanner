@@ -6,7 +6,7 @@ export class Splash extends Component {
     render() {
         return (
             
-            <span>
+            <span className='splash-body'>
                 <NavigationBar />
                 
                 <main className="splash">

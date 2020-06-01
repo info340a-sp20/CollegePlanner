@@ -32,7 +32,7 @@ body {
 
 .checking {
   padding-right : 1em;
-  margin-right:1em;
+  margin-right : 1em;
 }
 .menu-container div:nth-of-type(odd) {
   background-color : white;
