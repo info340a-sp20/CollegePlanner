@@ -6,7 +6,7 @@ export class Splash extends Component {
     render() {
         return (
             
-            <body>
+            <span>
                 <NavigationBar />
                 
                 <main className="splash">
@@ -15,7 +15,7 @@ export class Splash extends Component {
                 </main>
                 <Footer />
                 
-            </body>
+            </span>
 
         );
     }

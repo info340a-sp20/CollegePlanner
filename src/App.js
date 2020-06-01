@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; //import React Component
 import './index.css';
-import { Managers, AssignmentManager, LectureManager, QuizManager } from './Managers.js';
+import { AssignmentManager, LectureManager, QuizManager } from './Managers.js';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { CalanderView, MemoView } from './MainPages.js';
 import { Splash } from './Splash.js'; //a sample list of dogs (model)
@@ -10,37 +10,39 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasks: []
+      tasks: [],
+      filtered: []
     };
+    this.handleChange = this.handleChange.bind(this);
   }
-  search = (search) => {
-    
-    this.setState((currentState) => {
-      let original = [];
-      if(search == '') {
-        original = currentState.tasks.map((task) => {
-          return task;
-        })
-      }
-      
-      let updatedTasks = currentState;
+componentDidMount() {
+    this.setState({
+        filtered: this.state.tasks
+    });
+}
 
-      if (search != '') {
-        updatedTasks = currentState.tasks.filter((task) => {
-          let lowerDescription = task.description.toLowerCase();
-          let filter = search.toLowerCase();
-          return lowerDescription.startsWith(filter);
+componentWillReceiveProps(nextProps) {
+    this.setState({
+        filtered: nextProps.tasks
+    });
+}
+handleChange(e) {
+    let currentList = [];
+    let newList = [];
+    if (e.target.value !== "") {
+        currentList = this.state.tasks
+        newList = currentList.filter(item => {
+            const lc = item.description.toLowerCase();
+            const filter = e.target.value.toLowerCase();
+            return lc.startsWith(filter);
         });
-      } else {
-        updatedTasks = original;
-      }
-      search = search.toLowerCase();
-
-      return { tasks: updatedTasks }
-    })
-
-  }
-
+    } else {
+        newList = this.state.tasks;
+    }
+    this.setState({
+        filtered: newList
+    });
+}
   addTask = (newDescription, day, taskKind) => {
     this.setState((currentState) => {
       let newTask = {
@@ -52,8 +54,12 @@ class App extends Component {
         return task;
       })
       updatedTasks.push(newTask);
+      this.setState({
+        filtered: updatedTasks
+    });
       return { tasks: updatedTasks }
     })
+    
   }
 
   deleteTask = () => {
@@ -65,23 +71,23 @@ class App extends Component {
 
   renderLectureManager = (routerProps) => {
     return <LectureManager {...routerProps} state={this.state} addTask={this.addTask}
-      deleteTask={this.deleteTask} seachCallback={this.search} />
+      deleteTask={this.deleteTask} searchCallback={this.handleChange} />
   }
   renderAssignmentManager = (routerProps) => {
     return <AssignmentManager {...routerProps} state={this.state} addTask={this.addTask}
-    deleteTask={this.deleteTask} seachCallback={this.search} />
+    deleteTask={this.deleteTask} searchCallback={this.handleChange} />
   }
   renderQuizManager = (routerProps) => {
     return <QuizManager {...routerProps} state={this.state} addTask={this.addTask}
-    deleteTask={this.deleteTask} seachCallback={this.search} />
+    deleteTask={this.deleteTask} searchCallback={this.handleChange} />
   }
-
   renderMemo = (routerProps) => {
-    return <MemoView {...routerProps} state={this.state} />
+    return <MemoView {...routerProps} state={this.state} searchCallback={this.handleChange} />
   }
   renderCalanderView = (routerProps) => {
     return <CalanderView {...routerProps} state={this.state} />
   }
+  
   render() {
     return (
       <BrowserRouter>

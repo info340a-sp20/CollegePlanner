@@ -13,9 +13,9 @@ body {
   background-image : url('img/summer.jpg');
   
 }
-.menu-container {
+/* .menu-container {
   display: none;
-}
+} */
 .menu-container div a {
   padding-left : 1em;
   padding-bottom: 0.5em;
@@ -26,12 +26,19 @@ body {
   font-size: 1em;
   padding-left: 1em;
   padding-bottom: 2em;
+  word-break:break-all;
+
+}
+
+.checking {
+  padding-right : 1em;
+  margin-right:1em;
 }
 .menu-container div:nth-of-type(odd) {
   background-color : white;
 }
 .menu-container div p {
-  font-size: 1.3em;
+  font-size: 1em;
   padding-left : 1em;
   display: inline;
   text-align: left;
@@ -43,6 +50,14 @@ body {
   display : inline;
   padding-bottom : 2em;
   color: saddlebrown;
+}
+
+.tableTitle {
+  font-size: 1em;
+  display: inline;
+  text-align: left;
+  color : palevioletred;
+
 }
 
 nav {
@@ -111,13 +126,12 @@ nav {
   color : saddlebrown;
 
 }
-table {
-  
-  background-color: white;
+.table2 {
+  word-break:break-all;
   table-layout: fixed ;
   width: 100% ;
 }
-table td {
+table2 td {
   height : 30em;
   width: 25% ;
 }
@@ -142,6 +156,12 @@ font-size: .5em;
   margin-top : 23vh;
   color : steelblue;
   font-size: 1em;
+}
+.table2 th {
+  font-size: 1em;
+  padding-left : 1em;
+  text-align: center;
+  color : saddlebrown;
 }
 
 .button-container a {

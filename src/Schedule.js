@@ -8,36 +8,38 @@ export class Schedule extends Component {
                 <div className="flex-container">
                     <EachDay days={days} task={this.props.task} state={this.props.state} />
                 </div>
+                
             </main>
         );
     }
 }
 
 export class EachDay extends Component {
-    
+   
       
     render() {
         let isMainPage = this.props.task + ': ';
-        if (this.props.task == undefined) {
+        if (this.props.task === undefined) {
             isMainPage = '';
         }
-        let rightKind = this.props.state.tasks.map((task) => {
-            if (task != undefined && task.taskKind == this.props.task) {
+        let rightKind = this.props.state.filtered.map((task) => {
+            if (task !== undefined && task.taskKind === this.props.task) {
                 return task;
-            }
+            } 
+            
         });
 
         let result = this.props.days.map((day) => {
             let tasks2 = rightKind.map((task) => {
                 
-                if (task != undefined && task.day == day) {
+                if (task !== undefined && task.day === day) {
                     return task;
                 }
             });
             let textComponent = tasks2.map((task) => {
-                if (task != undefined) {
+                if (task !== undefined) {
                     return <Card.Text as='div'>
-                        {task.description + '  '}<input type='checkbox'></input>
+                        - {task.description + '  '}<input className='checking' type='checkbox'></input>
                     </Card.Text>
                 }
 

@@ -16,7 +16,6 @@ export class InteractionFeatures extends Component {
         this.props.deleteTaskCallback();
 
       }
-
       handleChange = (event) => {
         let value = event.target.value;
         this.setState({ newDescription: value })
@@ -30,12 +29,7 @@ export class InteractionFeatures extends Component {
         event.preventDefault();
         
         this.props.addTaskCallback(this.state.newDescription, this.state.day, this.state.taskKind);
-        this.state.newDescription = '';
-      }
-
-      handleSearch = (event) => {
-        let value = event.target.value;
-          this.props.searchCallback(value);
+        this.setState({ newDescription: '' })
       }
     render() {
         return (
@@ -44,9 +38,10 @@ export class InteractionFeatures extends Component {
                     <AddTasks  task={this.props.task} addTaskCallback={this.props.addTaskCallback} 
                     handleChange={this.handleChange} state={this.state}
                     handleSelect={this.handleSelect} handleClick={this.handleClick}/>
-                    
+
                     <DeleteButton task={this.props.task} handleDelete={this.handleDelete}/>
-                    <SearchBar handleSearch={this.handleSearch}/>
+                    
+                    <SearchBar searchCallback={this.props.searchCallback}/>
                 </div>
             </section>
         );
@@ -66,6 +61,7 @@ export class AddTasks extends Component {
 
                 </input>
                 <AddButton task={this.props.task} addTask={this.props.addTask} state={this.props.state} handleClick={this.props.handleClick}/>
+                
             </div>
         );
     }
@@ -94,7 +90,8 @@ export class SearchBar extends Component {
     render() {
         return (
             <span>
-                <input id="searchbar" type="text"  name="search" placeholder="Search..." onChange={this.props.handleSearch}></input>
+                <input id="searchbar" type="text"  name="search" placeholder="Search..." onChange={this.props.searchCallback}></input>
+
             </span>
         );
     }

@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import {NavLink } from 'react-router-dom';
+
 export class ChangeViewButton extends Component {
     render() {
         return (
-            <div class="button-container">
-                <div class="searchBox" role="search">
-                    <input type="text" placeholder="Search..."></input>
+            <span className="button-container">
+                
+                <div className="searchBox" role="search">
+                    <input type="text" placeholder="Search..." onChange={this.props.searchCallback}></input>
                 </div>
-                <a class="btn btn-secondary btn-sm" href={'/' + this.props.path} role="button">{this.props.view}</a>
-            </div>
+                <NavLink className="btn btn-secondary btn-sm" to={'/' + this.props.path} role="button" >{this.props.view}</NavLink>
+            </span>
         );
     }
 }
