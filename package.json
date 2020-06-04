@@ -9,10 +9,12 @@
     "bootstrap": "^4.5.0",
     "firebase": "^7.14.6",
     "firebase-tools": "^8.4.1",
+    "firebaseui": "^4.5.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-favicon": "0.0.18",
+    "react-firebaseui": "^4.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },

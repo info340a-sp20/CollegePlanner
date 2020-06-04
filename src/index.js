@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
+var firebaseConfig = {
+  apiKey: "AIzaSyCRxyHz8WSGhtZt2rqz3FqkeP2Z6l4KS6A",
+  authDomain: "sunnys-project-240021.firebaseapp.com",
+  databaseURL: "https://sunnys-project-240021.firebaseio.com",
+  projectId: "sunnys-project-240021",
+  storageBucket: "sunnys-project-240021.appspot.com",
+  messagingSenderId: "1001324056941",
+  appId: "1:1001324056941:web:ba3a969388cf12916cca64",
+  measurementId: "G-VZ9WLN1L5Q"
+};
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById('root')
 );
 
