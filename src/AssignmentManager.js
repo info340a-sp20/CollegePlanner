@@ -7,7 +7,7 @@ export class AssignmentManager extends Component {
     render() {
         return (
             <body>
-                <NavigationBar />
+                <NavigationBar handleSignOut={this.props.handleSignOut}/>
                 <h1 className="lecture-font">Assignment Manager</h1>
                 <InteractionFeatures task='Assignments'/>
                 <Schedule task='Assignments'/>

@@ -5,17 +5,24 @@ import { Footer } from './Footer.js';
 export class Splash extends Component {
     render() {
         return (
-            
-            <span className='splash-body'>
-                <NavigationBar />
-                
+
+            <body className='splash-body'>
+                <header>
+                    <nav className="menu">
+                        <h1>Simple Online Planner</h1>
+
+
+                    </nav>
+
+                </header>
+
                 <main className="splash">
                     <h1>PLAN AND SCHEDULE</h1>
                     <h2>easy online planner for all college students</h2>
                 </main>
                 <Footer />
-                
-            </span>
+
+            </body>
 
         );
     }

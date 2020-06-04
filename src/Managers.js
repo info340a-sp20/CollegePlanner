@@ -11,7 +11,7 @@ export class LectureManager extends Component {
     render() {
         return (
             <body>
-                <NavigationBar />
+                <NavigationBar handleSignOut={this.props.handleSignOut}/>
                 
                 <h1 className="lecture-font">Lecture Manager</h1>
                 <InteractionFeatures task='Lectures' state={this.props.state} addTaskCallback={this.props.addTask}
@@ -29,7 +29,7 @@ export class AssignmentManager extends Component {
     render() {
         return (
             <body>
-                <NavigationBar />
+                <NavigationBar handleSignOut={this.props.handleSignOut}/>
                 <h1 className="lecture-font">Assignment Manager</h1>
                 <InteractionFeatures task='Assignments' state={this.props.state} addTaskCallback={this.props.addTask}
                     deleteTaskCallback={this.props.deleteTask} searchCallback={this.props.searchCallback} />
@@ -46,7 +46,8 @@ export class QuizManager extends Component {
     render() {
         return (
             <body>
-                <NavigationBar />
+                <NavigationBar handleSignOut={this.props.handleSignOut}/>
+                
                 <h1 className="lecture-font">Quizzes/Exams Manager</h1>
                 <InteractionFeatures task='Quizzes/Exams' state={this.props.state} addTaskCallback={this.props.addTask}
                     deleteTaskCallback={this.props.deleteTask} searchCallback={this.props.searchCallback} />

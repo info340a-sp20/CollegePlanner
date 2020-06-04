@@ -10,7 +10,7 @@ body {
   
 }
 .splash-body {
-  background-image : url('img/summer.jpg');
+  background-image : url('img/spring3.jpg');
   
 }
 /* .menu-container {
@@ -22,11 +22,44 @@ body {
   padding-top : 0.5em;
   text-align: left;
 }
+
+.menu-container div button {
+  font-size: 1em;
+  padding-left : 1em;
+  display: inline;
+  text-align: left;
+  color : black;
+  background-color: transparent;
+  border: none;
+}
+
+.menu-container div button:hover {
+  color : saddlebrown;
+  text-decoration: underline;
+}
 .flex-container section div {
   font-size: 1em;
   padding-left: 1em;
   padding-bottom: 2em;
   word-break:break-all;
+
+}
+
+h3 {
+  font-size: 1.8em;
+  padding-top : 1em;
+  padding-right : 1em;
+  color : grey;
+  text-align: center;
+
+}
+
+h4 {
+  font-size: 1.0em;
+  padding-right : 1em;
+  color : grey;
+  text-align: center;
+  font-style: italic;
 
 }
 
@@ -145,7 +178,7 @@ font-size: .5em;
 #sub-menu-small {
   float:right;
 }
-#sub-menu-small i {
+#sub-menu-small  {
   padding-left: 1em;
   color : saddlebrown;
 }
@@ -154,7 +187,7 @@ font-size: .5em;
   font-family: "Kaushan Script", fantasy, Papyrus;
   text-align: center;
   margin-top : 23vh;
-  color : steelblue;
+  color : brown;
   font-size: 1em;
 }
 .table2 th {
@@ -227,9 +260,21 @@ li input {
 }
 
 @media (min-width: 768px) {
+  
   body {
-      background-image : url('img/springMedium.jpg');
+    background-image: url(img/springMedium.jpg);
+  }
+  .splash-body {
+    background-image: url(img/springMedium.jpg);
+    
+  }
+  .splash-body nav {
+    background-color: mistyrose;
+    width: 100%;
 
+  }
+  .splash-body .menu h1 {
+    font-size: 2em;
   }
   .menu-container div p {
       font-size: 2em;
@@ -243,7 +288,24 @@ li input {
   table {
       margin-top : 3em;
   }
+  h3 {
+    font-size: 2em;
+    padding-top : 1em;
+    padding-right : 1em;
+    color: lightslategray;
+    text-align: center;
   
+  }
+
+  h4 {
+    font-size: 1.3em;
+    padding-right : 1em;
+    color : lightslategray;
+    text-align: center;
+    font-style: italic;
+  
+  }
+
   .theme span {
       font-size: 1.2em;
   }
@@ -254,9 +316,14 @@ li input {
       float: right;
   } */
   .splash h1 {
+    padding-top: 0;
+    color: brown;
     font-size: 3.5em;
 }
 .splash h2 {
+  padding-bottom : 1em;
+  color: brown;
+
   font-size: 1.8em;
 }
 }
