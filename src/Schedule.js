@@ -6,7 +6,7 @@ export class Schedule extends Component {
         return (
             <main>
                 <div className="flex-container">
-                    <EachDay days={days} task={this.props.task} state={this.props.state} />
+                    <EachDay  days={days} task={this.props.task} state={this.props.state} />
                 </div>
                 
             </main>

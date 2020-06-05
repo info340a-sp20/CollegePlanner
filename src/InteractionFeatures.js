@@ -13,7 +13,7 @@ export class InteractionFeatures extends Component {
       handleDelete = (event) => {
         event.preventDefault();
 
-        this.props.deleteTaskCallback();
+        this.props.deleteTaskCallback(this.props.task);
 
       }
       handleChange = (event) => {

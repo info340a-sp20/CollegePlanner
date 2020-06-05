@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavigationBar } from './NavigationBar.js';
 import { ChangeViewButton } from './ChangeViewButton.js';
-import { NavLink, BrowserRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { Footer } from './Footer.js';
 import { AllSchedule } from './AllSchedule.js';

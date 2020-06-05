@@ -1,12 +1,11 @@
 import React, { Component } from 'react'; //import React Component
-import { NavigationBar } from './NavigationBar.js';
 import { Footer } from './Footer.js';
 
 export class Splash extends Component {
     render() {
         return (
 
-            <body className='splash-body'>
+            <div className='splash-body'>
                 <header>
                     <nav className="menu">
                         <h1>Simple Online Planner</h1>
@@ -22,7 +21,7 @@ export class Splash extends Component {
                 </main>
                 <Footer />
 
-            </body>
+            </div>
 
         );
     }
