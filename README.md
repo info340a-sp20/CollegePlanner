@@ -1,6 +1,11 @@
-# Project 2
+An online planner for college students
 
-This repository contains code for an interactive web app, created for the _Client-Side Web Development_ course at the UW iSchool.
+Using Javascript, React, and Firebase, built a complete
+Webapp for college student. Using Firebase, the website
+persists state and ables to login/logout with Google
+email.(Saves the user data using Firebase as a backend)
+
+
 
 **Navigation bars** 
 
